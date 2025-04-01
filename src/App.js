@@ -1,9 +1,12 @@
-import './App.css';
+import "./App.css";
+import BlogPage from "./components/BlogPage";
+import UserInfoContext from "./context/UserInfoContext";
 
-function App() {
-  const message = 'Hello World';
-
+export default function App() {
+  const user = { username: "Admin", isAdmin: true };
   return (
-    <></> 
+    <UserInfoContext.Provider value={user}>
+      <BlogPage></BlogPage>
+    </UserInfoContext.Provider>
   );
 }
