@@ -1,9 +1,14 @@
-import './App.css';
+import React from "react";
+import "./App.css";
+import ThemeProvider from "./context/ThemeProvider";
+import ComponentA from "./components/ComponentA";
 
 function App() {
-  const message = 'Hello World';
-
   return (
-    <></> 
+    <ThemeProvider>
+      <ComponentA></ComponentA>
+    </ThemeProvider>
   );
 }
+
+export default App;
